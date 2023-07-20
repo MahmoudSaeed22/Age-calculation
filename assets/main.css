@@ -1,0 +1,169 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Font-EB";
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+section {
+    background-color: #f0f0f0;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 10% 20%;
+}
+
+.card {
+    background-color: white;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border-bottom-right-radius: 147px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 0 30px;
+    border-bottom: 1.5px solid #f0f0f0;
+    position: relative;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 40% !important;
+}
+
+input {
+    width: 70%;
+    border: 1.5px solid #f0f0f0;
+    border-radius: 6px;
+    padding: 11px;
+    font-size: 25px;
+    color: #151515;
+    font-family: "Font-B";
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+label {
+    font-family: "Font-B";
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    color: #898989;
+    font-size: 13px;
+}
+
+button {
+    padding: 1px 20px;
+    background: #9631ff;
+    border: none;
+    border-radius: 50%;
+    transform: translateY(72px);
+    width: 86px;
+    height: 86px;
+}
+
+.results {
+    padding: 20px 0;
+    font-size: 43px;
+    /* font-weight:200; */
+}
+
+h1 span {
+    margin-bottom: -30px;
+    color: #8d41ff;
+}
+
+h1 {
+    color: #151515;
+}
+
+
+.alertDay, .alertYear, .alertMonth {
+    color: red;
+    font-family: 'Font-R';
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 40% 10% 20%;
+    }
+
+    .input {
+        width: 40% !important;
+    }
+
+    input {
+        width: 65%;
+        border: 1.5px solid #f0f0f0;
+        border-radius: 6px;
+        padding: 9px;
+        font-size: 18px;
+    }
+
+    label {
+        font-family: "Font-B";
+        padding-bottom: 2px;
+        font-size: 10px;
+    }
+
+    button {
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, 80px);
+        width: 45px;
+        height: 45px;
+        left: 50%;
+    }
+
+    button svg {
+        width: 30px;
+        transform: translate(-12px, 0px);
+    }
+
+    .results {
+        padding: 40px 0 60px;
+        font-size: 25px;
+
+    }
+
+    .alertDay, .alertYear, .alertMonth {
+        color: red;
+        font-family: 'Font-R';
+        padding-top: 6px;
+        font-size: 8px;
+    }
+
+}
