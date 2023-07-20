@@ -83,10 +83,10 @@ form.onsubmit=(e)=>{
 
 
 if(alertDay.innerHTML == "" && alertMonth.innerHTML == "" &&  alertYear.innerHTML == ""){
-    
-    let newStyle = document.getElementById("styleAlert")
-    newStyle.innerHTML=""
-
+    let newStyle = document.getElementById("styleAlert");
+    console.log(newStyle)
+    if(newStyle != undefined ){newStyle.innerHTML ="";
+}
      if( day.value > dayNow && month.value <= monthNow  ) {
             days.textContent =  dayNow - day.value + countDayMonthNew ;
             months.textContent =   monthNow -1 - month.value ;
@@ -94,17 +94,17 @@ if(alertDay.innerHTML == "" && alertMonth.innerHTML == "" &&  alertYear.innerHTM
     }
      if( day.value > dayNow && month.value > monthNow   ) {
             days.textContent = dayNow - day.value + countDayMonthNew ;
-            months.textContent = month.value - monthNow +1 ;
+            months.textContent = 12 - (month.value - monthNow +1) ;
             years.textContent = yearNow - year.value -1 ;
     }
      if( day.value < dayNow && month.value > monthNow   ) {
         days.textContent = dayNow - day.value ;
-        months.textContent = month.value - monthNow +2 ;
+        months.textContent = 12 - (month.value - monthNow ) ;
         years.textContent = yearNow - year.value -1 ;
     }
-     if( day.value < dayNow && month.value <= monthNow   ) {
+     if( day.value <= dayNow && month.value <= monthNow   ) {
             days.textContent = dayNow - day.value ;
-            months.textContent = monthNow -1 - month.value +1 ;
+            months.textContent = monthNow  - month.value  ;
             years.textContent = yearNow - year.value ;
     }
 }
